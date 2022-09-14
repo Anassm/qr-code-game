@@ -22,10 +22,19 @@ body {
     position: relative;
     top: 35vh;
 }
-.enter-game-btn {
-    padding: 25px 100px 25px 100px;
+.start-link {
+    text-decoration: none;
+    font-size: xx-large;
+    background-color: white;
+    color: black;
+    padding-inline: 50px;
+    padding-block: 20px;
     border-radius: 10px;
-    box-shadow: 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: .5s;
+}
+.start-link:hover{
+    box-shadow: none;
 }
 .welcome-btn-txt {
     font-size: 30px;
