@@ -1,0 +1,32 @@
+html {
+    height: 100%;
+}
+body {
+    background: linear-gradient(180deg, rgba(178,203,238,1) 65%, rgba(224,234,253,1));
+}
+.welcome-title {
+    position: relative;
+    top: 30vh;
+    text-align: center;
+}
+.welcome-main-title {
+    color: #fff;
+    text-shadow: 2px 2px #000;
+}
+.welcome-sub-title {
+    color: #fff;
+    text-shadow: 2px 2px #000;
+}
+.enter-game {
+    text-align: center;
+    position: relative;
+    top: 35vh;
+}
+.enter-game-btn {
+    padding: 25px 100px 25px 100px;
+    border-radius: 10px;
+    box-shadow: 0;
+}
+.welcome-btn-txt {
+    font-size: 30px;
+}

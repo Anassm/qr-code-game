@@ -10,7 +10,7 @@
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
         <!-- Styles -->
-        <link rel="stylesheet" href="app.css">
+        <link rel="stylesheet" href="../css/app.css">
 
         <style>
             body {
@@ -26,7 +26,7 @@
 <footer>
 
 <div>
-    
+
 </div>
         
 </footer>
