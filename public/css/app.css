@@ -39,3 +39,16 @@ body {
 .welcome-btn-txt {
     font-size: 30px;
 }
+.title{
+    color: white;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+}
+.qr-code-grid{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: white;
+    padding: 20px;
+}
