@@ -2,12 +2,9 @@
 @section('app')
     <div class="title">De QR-Code-Game!</div>
     <div class="qr-code-grid">
-        @foreach()
+        @foreach($students as $student)
             <div class="qrcode">
-                @php
-                    $url = "https://qr-code-game.dev/$studentnr";
-                @endphp
-                {{ QrCode::generate($url) }}
+                {{ QrCode::generate("https://qr-code-game.dev/$student->studentnumber") }}
             </div>
         @endforeach
     </div>
