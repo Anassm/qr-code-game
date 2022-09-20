@@ -1,27 +1,33 @@
 html {
     height: 100%;
 }
+
 body {
-    background: linear-gradient(180deg, rgba(178,203,238,1) 65%, rgba(224,234,253,1));
+    background: linear-gradient(180deg, rgba(178, 203, 238, 1) 65%, rgba(224, 234, 253, 1));
 }
+
 .welcome-title {
     position: relative;
     top: 30vh;
     text-align: center;
 }
+
 .welcome-main-title {
     color: #fff;
     text-shadow: 2px 2px #000;
 }
+
 .welcome-sub-title {
     color: #fff;
     text-shadow: 2px 2px #000;
 }
+
 .enter-game {
     text-align: center;
     position: relative;
     top: 35vh;
 }
+
 .start-link {
     text-decoration: none;
     font-size: xx-large;
@@ -33,22 +39,83 @@ body {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transition: .5s;
 }
-.start-link:hover{
+
+.start-link:hover {
     box-shadow: none;
 }
+
 .welcome-btn-txt {
     font-size: 30px;
 }
-.title{
+
+.title {
     color: white;
-    font-size: 40px;
-    display: flex;
-    justify-content: center;
+    font-size: 42px;
+    background-color: blue;
+    border-radius: 10px;
+    width: 30rem;
+    position: relative;
+    top: 26px;
+    padding: 6px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
-.qr-code-grid{
+
+@media(max-width: 500px) {
+    .title {
+        left: 28vh;
+    }
+}
+
+.qr-code-grid {
     display: grid;
     place-items: center;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     background-color: white;
     padding: 20px;
+    height: 50rem;
+    border-radius: 10px;
+}
+
+.qrcode::after {
+    display: block;
+    padding-top: 10px;
+    text-align: center;
+  }
+
+/* Login pagina */
+.login {
+    position: relative;
+    text-align: center;
+    top: 40vh;
+}
+
+.d-nummer {
+    font-size: 22px;
+    height: 4rem;
+    width: 23rem;
+    border-radius: 10px;
+    font-weight: bold;
+    padding-left: 10px;
+    color: #000;
+}
+
+.login-btn {
+    background: #fff;
+    margin-left: 20px;
+    font-size: 22px;
+    padding: 19px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.login-title {
+    text-align: center;
+    position: relative;
+    top: 38vh;
+    color: #fff;
+    text-shadow: 2px 2px #000;
 }
