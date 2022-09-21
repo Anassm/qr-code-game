@@ -24,3 +24,5 @@ Route::get('/play', function () {
     return view('play');
 });
 Route::get('/play' , [StudentsController::class, 'students']);
+
+Route::get('/student/{students}',[StudentsController::class, 'studentview']);

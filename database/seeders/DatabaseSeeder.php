@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $users = [
-            ['id' => 1, 'studentnumber' => 'D264663', 'firstname' => 'Bram', 'lastname' => 'van Overveld'],
+            ['id' => 1, 'studentnumber' => 'D284663', 'firstname' => 'Bram', 'lastname' => 'van Overveld'],
             ['id' => 2, 'studentnumber' => 'D284849', 'firstname' => 'Anass', 'lastname' => 'Moussadi'],
             ['id' => 3, 'studentnumber' => 'D284126', 'firstname' => 'Gino', 'lastname' => 'Hanemaaijer'],
             ['id' => 4, 'studentnumber' => 'D280651', 'firstname' => 'Ruben', 'lastname' => 'van Beveren'],

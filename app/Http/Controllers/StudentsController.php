@@ -13,4 +13,9 @@ class StudentsController extends Controller
 
         return view('play')->with(compact('students'));
     }
+    public function studentview($studid){
+        $studentrecord = students::all()->where('studentnumber', $studid)->firstOrFail();
+        //dd($studentrecord);
+        return view('guess-student')->with(compact('studentrecord'));
+    }
 }

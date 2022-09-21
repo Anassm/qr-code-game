@@ -123,3 +123,9 @@ body {
     display: block;
     text-align: center;
 }
+.verhaal{
+    background-color: white;
+    padding: 20px;
+    height: 50rem;
+    border-radius: 10px;
+}
