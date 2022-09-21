@@ -6,11 +6,16 @@
 /vendor
 .env
 .env.backup
-.phpunit.result.cache
 Homestead.json
 Homestead.yaml
 auth.json
 npm-debug.log
 yarn-error.log
+composer.phar
+composer.lock
+.DS_Store
+Thumbs.db
+/phpunit.xml
 /.idea
 /.vscode
+.phpunit.result.cache
