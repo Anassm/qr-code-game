@@ -20,9 +20,9 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('login');
 });
-Route::get('/play', function () {
-    return view('play');
-});
+
 Route::get('/play' , [StudentsController::class, 'students']);
 
 Route::get('/student/{students}',[StudentsController::class, 'studentview']);
+
+Route::post('/play', [StudentsController::class, 'Checkstudentnr']);
