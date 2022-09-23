@@ -24,5 +24,6 @@ Route::get('/login', function () {
 Route::get('/play' , [StudentsController::class, 'students']);
 
 Route::get('/student/{students}',[StudentsController::class, 'studentview']);
+Route::get('/resultaat',[StudentsController::class, 'resultaat']);
 
 Route::post('/play', [StudentsController::class, 'Checkstudentnr']);
