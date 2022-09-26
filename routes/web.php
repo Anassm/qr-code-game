@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\questionController;
 use App\Http\Controllers\StudentsController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,8 @@ Route::get('/login', function () {
 
 Route::get('/play' , [StudentsController::class, 'students']);
 
-Route::get('/student/{students}',[StudentsController::class, 'studentview']);
+Route::get('/resultaat',[StudentsController::class, 'resultaat']);
 
 Route::post('/play', [StudentsController::class, 'Checkstudentnr']);
+
+Route::get('/student/{students}',[questionController::class, 'questionview']);

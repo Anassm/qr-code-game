@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\score;
 use Illuminate\Http\Request;
 use App\Models\students;
 
@@ -9,11 +10,11 @@ class StudentsController extends Controller
 {
     //
     public function students(){
-        $students = students::all();
-        return view('play')->with(compact('students'));
+        $student = students::first();
+        return view('play')->with(compact('student'));
     }
     public function studentview($studid){
-        $studentrecord = students::all()->where('studentnumber', $studid)->firstOrFail();
+        $studentrecord = students::all()->where('id', $studid)->firstOrFail();
         //dd($studentrecord);
         return view('guess-student')->with(compact('studentrecord'));
     }
@@ -26,5 +27,13 @@ class StudentsController extends Controller
         else{
             return redirect('/play');
         }
+    }
+    public function resultaat(){
+        $students = students::all();
+        $scores = score::all();
+        return view('score')->with(array(
+            'scores' => $scores,
+            'students' => $students
+        ));
     }
 }
