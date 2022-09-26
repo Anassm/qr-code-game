@@ -128,3 +128,48 @@ body {
 .qrcode-text{
     text-align: center;
 }
+@media (max-width: 768px) {
+
+    .mobile-header {
+        color: white;
+        font-size: 20px;
+        background-color: blue;
+        border-radius: 10px;
+        width: 12rem;
+        position: relative;
+        top: -39px;
+        padding: 6px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .mobile-verhaal {
+        background-color: white;
+        padding: 20px;
+        height: 44rem;
+        border-radius: 10px;
+        margin: 39px 14px 14px 14px;
+    }
+
+    .mobile-names{
+        margin-top: 7px;
+    }
+
+    .mobile-radio{
+        margin-top: 200px;
+    }
+
+    .mobile-submit{
+        float: right;
+        background: rgb(101, 101, 255);
+        margin-left: 20px;
+        font-size: 10px;
+        padding: 12px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+    }
+
+}

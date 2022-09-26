@@ -31,5 +31,24 @@ class DatabaseSeeder extends Seeder
         ];
         DB::table('students')->insert($users);
 
+        $questions = [
+            ['id' => 1, 'question' => '','studentnumber' => 'D284663',  'student_id' => '1',],
+            ['id' => 2, 'question' => '','studentnumber' => 'D284849',  'student_id' => '2',],
+            ['id' => 3, 'question' => '','studentnumber' => 'D284126', 'student_id' => '3',],
+            ['id' => 4, 'question' => '','studentnumber' => 'D280651', 'student_id' => '4',],
+            ['id' => 5, 'question' => '','studentnumber' => 'D274974', 'student_id' => '5',],
+            ['id' => 6, 'question' => '','studentnumber' => 'D232129', 'student_id' => '6',],
+            ['id' => 7, 'question' => '','studentnumber' => 'D272913', 'student_id' => '7',],
+            ['id' => 8, 'question' => '','studentnumber' => 'D284311', 'student_id' => '8',],
+            ['id' => 9, 'question' => '','studentnumber' => 'D282692', 'student_id' => '9',],
+            ['id' => 10, 'question' => '','studentnumber' => 'D283118', 'student_id' => '10',],
+            ['id' => 11, 'question' => 'test','studentnumber' => 'D284132', 'student_id' => '11',],
+            ['id' => 12, 'question' => '','studentnumber' => 'D281708', 'student_id' => '12',],
+
+
+        ];
+    
+        DB::table('questions')->insert($questions);
+
     }
 }
