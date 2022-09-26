@@ -18,7 +18,11 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        uitleg
+        Je scant zometeen de qr-code. De qr-code die je scant stuurt je door naar een pagina waar een verhaal over een van de studenten staat.
+        Daaronder heb je een lijst met alle studenten. 
+        Je klikt dan op de student die jij denkt dat het verhaal beschrijft. 
+        Dit doe je voor elke qr-code. 
+        Als je de laatste heb ingevuld dan krijg je te zien welke je goed had en welke je fout had.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
