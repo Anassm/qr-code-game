@@ -28,6 +28,11 @@
   </div>
 </div>
 
+<script>
+var exampleModal = new bootstrap.Modal(document.getElementById('exampleModal'), {})
+exampleModal.show()
+</script>
+
 
 <div class="title">De QR-Code-Game!</div>
 <div class="qr-code-grid">
