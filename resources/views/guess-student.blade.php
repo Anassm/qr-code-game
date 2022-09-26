@@ -9,16 +9,15 @@
 
         <div class="mobile-radio">
         @foreach($studentsnames as $student)
+
             <div class="mobile-names">
-              <input type="radio" id="student" name="student_radio">
+              <input type="radio" value="{{ $student->id }}" id="student_radio">
               <label for="student"> {{ $student->firstname }} {{ $student->lastname }}</label>
             </div>
         @endforeach
-        <input type="submit" class="mobile-submit" value="SEND">
         </div>
         
     <?php
-
         $studentlink = "/student";
         $id = $studentrecord->id +1;
         $baseurl = env('APP_URL');
@@ -31,5 +30,7 @@
 
     @endif
 
-    <a href="{{ $baseurl  }}{{$studentlink}}/{{$id}}">Ga verder</a>
+    <a href="{{ $baseurl  }}{{$studentlink}}/{{$id}}" class="mobile-submit" type="submit">Verstuur</a>
+ 
+
 @endsection

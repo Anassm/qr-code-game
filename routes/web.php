@@ -29,3 +29,4 @@ Route::get('/resultaat',[StudentsController::class, 'resultaat']);
 Route::post('/play', [StudentsController::class, 'Checkstudentnr']);
 
 Route::get('/student/{students}',[questionController::class, 'questionview']);
+

@@ -14,12 +14,11 @@ class questionController extends Controller
         $studentrecord = students::all()->where('id', $question)->firstOrFail();
         $questionrecord = question::where('id', $question)->firstOrFail();
         $studentsnames = students::all();
-
-
+        
         return view('guess-student', compact('questionrecord', 'studentsnames','studentrecord'));
     }
 
-
+    
     
     
 }
