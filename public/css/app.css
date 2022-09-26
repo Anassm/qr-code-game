@@ -69,9 +69,9 @@ body {
 }
 
 .qr-code-grid {
-    display: grid;
-    place-items: center;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: white;
     padding: 20px;
     height: 50rem;
@@ -119,13 +119,12 @@ body {
     color: #fff;
     text-shadow: 2px 2px #000;
 }
-.studentnr{
-    display: block;
-    text-align: center;
-}
 .verhaal{
     background-color: white;
     padding: 20px;
     height: 50rem;
     border-radius: 10px;
+}
+.qrcode-text{
+    text-align: center;
 }

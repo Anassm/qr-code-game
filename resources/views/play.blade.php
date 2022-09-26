@@ -22,7 +22,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        
+
       </div>
     </div>
   </div>
@@ -32,8 +32,8 @@
 <div class="title">De QR-Code-Game!</div>
 <div class="qr-code-grid">
     <div class="studenten">
-        {{ QrCode::generate("https://qr-code-game.dev/$student->id") }}
-        <label class="studentnr">{{ $student->id }}</label>
+        {{ QrCode::size(250)->generate("https://qr-code-game.dev/student/$student->id") }}<br><br>
+        <div class="qrcode-text">Scan de QR code van student nr.{{ $student->id }}<br> en begin met de game!</div>
     </div>
 </div>
 @endsection
