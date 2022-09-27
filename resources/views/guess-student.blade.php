@@ -6,17 +6,7 @@
         {{$questionrecord->question}}<br>
 
 
-
-        <div class="mobile-radio">
-        @foreach($studentsnames as $student)
-
-            <div class="mobile-names">
-              <input type="radio" value="{{ $student->id }}" id="student_radio">
-              <label for="student"> {{ $student->firstname }} {{ $student->lastname }}</label>
-            </div>
-        @endforeach
-        </div>
-
+        
     <?php
         $studentlink = "/student";
         $id = $studentrecord->id +1;
@@ -29,8 +19,25 @@
       ?>
 
     @endif
+        <div class="mobile-radio">
 
-    <a href="{{ $baseurl  }}{{$studentlink}}/{{$id}}" class="mobile-submit" type="submit">Verstuur</a>
- 
+            <form action="{{ $baseurl  }}{{$studentlink}}/{{$id}}">
+            @csrf
+            @method('put')
+            
+        @foreach($studentsnames as $student)
+
+            <div class="mobile-names">
+              <input type="radio" value="{{ $student->id }}" id="student_radio">
+              <label for="student"> {{ $student->firstname }} {{ $student->lastname }}</label>
+            </div>
+        @endforeach
+        </div>
+
+    <input type="hidden" value="0" name="score">
+    <input type="submit" value="Versuur" class="mobile-submit">
+
+    </form>
+
 
 @endsection

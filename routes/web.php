@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\questionController;
 use App\Http\Controllers\StudentsController;
+use App\Http\Controllers\ScoreController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,4 +31,7 @@ Route::get('/resultaat',[StudentsController::class, 'resultaat']);
 Route::post('/play', [StudentsController::class, 'Checkstudentnr']);
 
 Route::get('/student/{students}',[questionController::class, 'questionview']);
+Route::put('/student/{students}',[ScoreController::class, 'UpdateScore']);
+
+
 

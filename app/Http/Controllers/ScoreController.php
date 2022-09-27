@@ -6,8 +6,11 @@ use Illuminate\Http\Request;
 
 class ScoreController extends Controller
 {
-    public function UpdateScore()
+    public function UpdateScore(Request $request)
     {
-        
+        $request->validate([
+            'score'=>'required'
+
+        ]);
     }
 }
