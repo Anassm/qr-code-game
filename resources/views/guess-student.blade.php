@@ -20,21 +20,28 @@
 
     @endif
         <div class="mobile-radio">
-
+   
             <form action="{{ $baseurl  }}{{$studentlink}}/{{$id}}">
             @csrf
             @method('put')
             
         @foreach($studentsnames as $student)
-
+            @if($student->id == $questionrecord->student_id)
+                <?php
+                    $score = 1
+                ?>
+                @else
+                <?php
+                    $score = 0
+                ?>
+            @endif
             <div class="mobile-names">
-              <input type="radio" value="{{ $student->id }}" id="student_radio">
+              <input type="radio" value="{{$score}}" id="student_radio" name="score">
               <label for="student"> {{ $student->firstname }} {{ $student->lastname }}</label>
             </div>
         @endforeach
         </div>
 
-    <input type="hidden" value="0" name="score">
     <input type="submit" value="Versuur" class="mobile-submit">
 
     </form>
