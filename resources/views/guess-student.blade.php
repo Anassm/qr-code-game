@@ -4,7 +4,7 @@
     <div class="mobile-header">Dit is student #{{$questionrecord->student_id}} </div>
         <h3>De vraag is:</h3><br>
         {{$questionrecord->question}}<br>
-        
+
 
 
         <div class="mobile-radio">
@@ -16,7 +16,7 @@
             </div>
         @endforeach
         </div>
-        
+
     <?php
         $studentlink = "/student";
         $id = $studentrecord->id +1;

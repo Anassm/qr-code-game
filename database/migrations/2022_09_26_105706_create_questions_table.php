@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('question');
             $table->string('studentnumber');
-            $table->integer('student_id');
-            
+            $table->foreignId('student_id')->constrained();
+
             $table->timestamps();
         });
     }

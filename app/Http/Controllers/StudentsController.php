@@ -13,11 +13,6 @@ class StudentsController extends Controller
         $student = students::first();
         return view('play')->with(compact('student'));
     }
-    public function studentview($studid){
-        $studentrecord = students::all()->where('id', $studid)->firstOrFail();
-        //dd($studentrecord);
-        return view('guess-student')->with(compact('studentrecord'));
-    }
     public function Checkstudentnr(Request $request){
         $txtstudentnr = $request->get('studententnr');
         $checkstudent = students::all()->where('studentnumber', $txtstudentnr)->first();
