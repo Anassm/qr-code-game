@@ -21,7 +21,7 @@
     @endif
         <div class="mobile-radio">
    
-            <form action="{{ $baseurl  }}{{$studentlink}}/{{$id}}">
+            <form action="{{ $baseurl  }}{{$studentlink}}/{{$id}}" method="POST">
             @csrf
             @method('put')
             
@@ -41,7 +41,7 @@
             </div>
         @endforeach
         </div>
-
+    <input type="hidden" value="">
     <input type="submit" value="Versuur" class="mobile-submit">
 
     </form>

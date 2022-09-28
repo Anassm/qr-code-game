@@ -16,10 +16,15 @@ class ScoreController extends Controller
             'score'=>'required'
 
         ]);
+        // $studid = score::all()->where('id',1);
+        $scoretabel = score::all()->where('students_id',1);
+        $aantal = (int)$scoretabel->aantal;
         $scoreInput = $request->get('score');
 
         if($scoreInput == 1){
-            $updateScore = 
+            $updateScore =  $aantal + 1;
+            $scoretabel->aantal = $updateScore;
+            $scoretabel->save();
         }
 
     }
