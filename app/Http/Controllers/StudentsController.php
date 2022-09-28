@@ -19,7 +19,8 @@ class StudentsController extends Controller
         $checkstudent = students::all()->where('studentnumber', $txtstudentnr)->first();
 
         $request->session()->put('studentid', $checkstudent->id);
-        
+        $request->session()->put('studentfirstname', $checkstudent->firstname);
+        $request->session()->put('studentlastname', $checkstudent->lastname);
         if($checkstudent == null){
             return redirect('/login')->with('loginerror', 'Uw heeft een verkeerd studentnummer ingevuld check of het begint met D...');
         }
@@ -33,9 +34,13 @@ class StudentsController extends Controller
         }
     }
 
-    public function resultaat(){
-        $students = students::all();
-        $scores = score::all();
+    public function resultaat(Request $request){
+        $studentid = $request->session()->get('studentid');
+
+        $students = students::all()->where('id', $studentid)->first();
+        
+        $scores = score::all()->where('students_id',$studentid)->first();
+
         return view('score')->with(array(
             'scores' => $scores,
             'students' => $students

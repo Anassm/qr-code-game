@@ -18,13 +18,7 @@
         $id = $studentrecord->id +1;
         $baseurl = env('APP_URL');
     ?>
-    @if($id == 13)
-      <?php
-      $studentlink = "";
-      $id = "resultaat";
-      ?>
 
-    @endif
         <div class="mobile-radio">
    
             <form action="{{ $baseurl  }}{{$studentlink}}/{{$id}}" method="POST">

@@ -16,8 +16,8 @@ section {
 </style>
 
 <section>
-  <h1 style="text-align:center"> je score is </h1>
-  <h1 style="text-align:center">/student naam\ </h1>
+  <h1 style="text-align:center"> score: {{$scores->aantal}}/12 </h1>
+  <h1 style="text-align:center">Naam: {{$students->firstname}} {{$students->lastname}}</h1>
 
 </section>
 
