@@ -1,5 +1,11 @@
 @extends('base')
 @section('app')
+@if($errors->any())
+            <ul class="errors">@foreach($errors->all() as $error)
+                    <li>{{$error}}</li>
+                @endforeach
+            </ul>
+ @endif
 <div class="mobile-verhaal">
     <div class="mobile-header">Dit is student #{{$questionrecord->student_id}} </div>
         <h3>De vraag is:</h3><br>
@@ -41,7 +47,7 @@
             </div>
         @endforeach
         </div>
-    <input type="hidden" value="">
+    <input type="hidden" value="{{$id}}" name="hiddenid">
     <input type="submit" value="Versuur" class="mobile-submit">
 
     </form>
