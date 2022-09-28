@@ -14,7 +14,6 @@ class StudentsController extends Controller
         return view('play')->with(compact('student'));
     }
     public function Checkstudentnr(Request $request){
-        $score = score::all();
         $txtstudentnr = $request->get('studententnr');
         $checkstudent = students::all()->where('studentnumber', $txtstudentnr)->first();
 
@@ -22,15 +21,6 @@ class StudentsController extends Controller
             return redirect('/login')->with('loginerror', 'Uw heeft een verkeerd studentnummer ingevuld check of het begint met D...');
         }
         else{
-            if(score::find($checkstudent->id)==null){
-                $score = new score();
-                $score->students_id = $checkstudent->id;
-                $score->save();  
-                
-            }else{
-                return redirect('/login')->with('loginerror', 'Uw heeft dit spel al gespeeld u kunt niet nog een keer spelen.');
-
-            }
             return redirect('/play'); 
         }
     }
