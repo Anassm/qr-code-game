@@ -49,6 +49,20 @@ class DatabaseSeeder extends Seeder
         ];
     
         DB::table('questions')->insert($questions);
-
+        $scores = [
+            ['students_id' => 1],
+            ['students_id' => 2],
+            ['students_id' => 3],
+            ['students_id' => 4],
+            ['students_id' => 5],
+            ['students_id' => 6],
+            ['students_id' => 7],
+            ['students_id' => 8],
+            ['students_id' => 9],
+            ['students_id' => 10],
+            ['students_id' => 11],
+            ['students_id' => 12],
+        ];
+        DB::table('scores')->insert($scores);
     }
 }
