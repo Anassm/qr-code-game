@@ -18,13 +18,14 @@ class StudentsController extends Controller
         $txtstudentnr = $request->get('studententnr');
         $checkstudent = students::all()->where('studentnumber', $txtstudentnr)->first();
 
-        $request->session()->put('studentid', $checkstudent->id);
-        $request->session()->put('studentfirstname', $checkstudent->firstname);
-        $request->session()->put('studentlastname', $checkstudent->lastname);
+
         if($checkstudent == null){
             return redirect('/login')->with('loginerror', 'Uw heeft een verkeerd studentnummer ingevuld check of het begint met D...');
         }
         else{
+            $request->session()->put('studentid', $checkstudent->id);
+            $request->session()->put('studentfirstname', $checkstudent->firstname);
+            $request->session()->put('studentlastname', $checkstudent->lastname);
             $student = students::first();
 
             return view('play')->with(array(
