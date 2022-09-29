@@ -9,7 +9,7 @@
 <div class="mobile-verhaal">
     <div class="mobile-header">Dit is student #{{$questionrecord->student_id}} </div>
         <h3>De vraag is:</h3><br>
-        {{$questionrecord->question}}<br>
+        <h1>{{$questionrecord->question}}</h1>
 
 
         

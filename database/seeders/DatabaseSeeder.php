@@ -32,36 +32,36 @@ class DatabaseSeeder extends Seeder
         DB::table('students')->insert($users);
 
         $questions = [
-            ['id' => 1, 'question' => '','studentnumber' => 'D284663',  'student_id' => '1',],
-            ['id' => 2, 'question' => '','studentnumber' => 'D284849',  'student_id' => '2',],
-            ['id' => 3, 'question' => '','studentnumber' => 'D284126', 'student_id' => '3',],
-            ['id' => 4, 'question' => '','studentnumber' => 'D280651', 'student_id' => '4',],
-            ['id' => 5, 'question' => '','studentnumber' => 'D274974', 'student_id' => '5',],
-            ['id' => 6, 'question' => '','studentnumber' => 'D232129', 'student_id' => '6',],
-            ['id' => 7, 'question' => '','studentnumber' => 'D272913', 'student_id' => '7',],
-            ['id' => 8, 'question' => '','studentnumber' => 'D284311', 'student_id' => '8',],
-            ['id' => 9, 'question' => '','studentnumber' => 'D282692', 'student_id' => '9',],
-            ['id' => 10, 'question' => '','studentnumber' => 'D283118', 'student_id' => '10',],
-            ['id' => 11, 'question' => 'test','studentnumber' => 'D284132', 'student_id' => '11',],
-            ['id' => 12, 'question' => '','studentnumber' => 'D281708', 'student_id' => '12',],
+            ['id' => 1, 'question' => 'wie is de code wizard in de klas?','studentnumber' => 'D284663',  'student_id' => '1',],
+            ['id' => 2, 'question' => 'wie was er aan het flexen met zijn steam deck in de klas?','studentnumber' => 'D284849',  'student_id' => '2',],
+            ['id' => 3, 'question' => 'wie stelt dew meeste vragen in de klas?','studentnumber' => 'D284126', 'student_id' => '3',],
+            ['id' => 4, 'question' => 'wie gaat er elke keer naar de appie?','studentnumber' => 'D280651', 'student_id' => '4',],
+            ['id' => 5, 'question' => 'wie gaat er altijd tijd onderhandelen met de leraar?','studentnumber' => 'D274974', 'student_id' => '5',],
+            ['id' => 6, 'question' => '20/15/13/13/25 met welke cijfers als de letters in de alfabet kun je deze naam maken?','studentnumber' => 'D232129', 'student_id' => '6',],
+            ['id' => 7, 'question' => 'welke achternaam rijmt met macaroni?','studentnumber' => 'D272913', 'student_id' => '7',],
+            ['id' => 8, 'question' => 'wie is er altijd op vakantie?','studentnumber' => 'D284311', 'student_id' => '8',],
+            ['id' => 9, 'question' => 'wie stuurt er altijd een foto in de groeps app dat hij aan het feesten is?','studentnumber' => 'D282692', 'student_id' => '9',],
+            ['id' => 10, 'question' => 'wie rijdt met een brommer naar school?','studentnumber' => 'D283118', 'student_id' => '10',],
+            ['id' => 11, 'question' => 'wie is de stilste in de klas?','studentnumber' => 'D284132', 'student_id' => '11',],
+            ['id' => 12, 'question' => 'wie draagt altijd een beanie in de klas?','studentnumber' => 'D281708', 'student_id' => '12',],
 
 
         ];
     
         DB::table('questions')->insert($questions);
         $scores = [
-            ['students_id' => 1, 'aantal' => '0'],
-            ['students_id' => 2, 'aantal' => '0'],
-            ['students_id' => 3, 'aantal' => '0'],
-            ['students_id' => 4, 'aantal' => '0'],
-            ['students_id' => 5, 'aantal' => '0'],
-            ['students_id' => 6, 'aantal' => '0'],
-            ['students_id' => 7, 'aantal' => '0'],
-            ['students_id' => 8, 'aantal' => '0'],
-            ['students_id' => 9, 'aantal' => '0'],
-            ['students_id' => 10, 'aantal' => '0'],
-            ['students_id' => 11, 'aantal' => '0'],
-            ['students_id' => 12, 'aantal' => '0'],
+            ['students_id' => 1],
+            ['students_id' => 2],
+            ['students_id' => 3],
+            ['students_id' => 4],
+            ['students_id' => 5],
+            ['students_id' => 6],
+            ['students_id' => 7],
+            ['students_id' => 8],
+            ['students_id' => 9],
+            ['students_id' => 10],
+            ['students_id' => 11],
+            ['students_id' => 12],
         ];
         DB::table('scores')->insert($scores);
     }
